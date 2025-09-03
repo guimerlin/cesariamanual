@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual do Usuário - Cesária App</title>
+    <title>Cesária App - Manual</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,8 +83,8 @@
                     <h2 class="text-3xl md:text-4xl font-extrabold text-yellow-500 mb-6">Seção de Conversas</h2>
                     <div class="text-slate-600 leading-relaxed space-y-4">
                         <p>O centro de comunicação do Cesária App, permitindo que você interaja com todas as lojas e contas cadastradas, gerencie conversas e participe de grupos.</p>
-                        <p><strong class="text-slate-800">Lista de Chats:</strong> Na tela inicial, você encontrará uma lista de todos os chats. O status online é indicado por um ponto verde, facilitando a identificação de quem está disponível.</p>
-                        <p><strong class="text-slate-800">Envio de Mensagens:</strong> Envie mensagens normais com 'Enter' ou urgentes, que geram notificações sonoras e visuais para garantir atenção imediata.</p>
+                        <p><strong class="text-slate-800">Lista de Chats:</strong> Na tela inicial, você encontrará uma lista de todos os chats. O status online é indicado por um <strong class="text-green-600 font-bold">ponto verde</strong>, facilitando a identificação de quem está disponível.</p>
+                        <p><strong class="text-slate-800">Envio de Mensagens:</strong> Envie mensagens <strong class="text-green-600 font-bold">normais com 'Enter'</strong> ou <strong class="text-red-600 font-bold">urgentes</strong>, que geram notificações sonoras e visuais para garantir atenção imediata.</p>
                     </div>
                 </div>
                 <div class="flex justify-center">
@@ -107,8 +108,8 @@
                 <div class="text-left md:order-1">
                     <h2 class="text-3xl md:text-4xl font-extrabold text-orange-500 mb-6">Navegação do Sistema</h2>
                     <div class="text-slate-600 leading-relaxed space-y-4">
-                        <p>A barra de tarefas é o principal meio de navegação, permitindo acesso rápido a diferentes seções. É acessada através do botão de três barras (menu hambúrguer).</p>
-                        <p>Ao clicar neste botão ou pressionar F1, a barra se expande, revelando opções que o levarão a outras páginas, como Transferência de Produtos e Consulta de Convênios.</p>
+                        <p>A barra de tarefas é o principal meio de navegação, permitindo acesso rápido a diferentes seções. É acessada através do <strong class="text-red-600 font-bold">botão de três barras (menu hambúrguer)</strong>.</p>
+                        <p>Ao clicar neste botão ou pressionar <strong class="text-slate-800">F1</strong>, a barra se expande, revelando opções que o levarão a outras páginas, como <strong class="text-orange-600">Transferência de Produtos</strong> e <strong class="text-orange-600">Consulta de Convênios</strong>.</p>
                     </div>
                 </div>
             </div>
@@ -129,7 +130,7 @@
                          <h3 class="text-2xl font-bold text-slate-800 mb-4">Como Solicitar Produtos</h3>
                          <div class="text-slate-600 leading-relaxed space-y-3">
                             <p>Esta ferramenta é valiosa para gerenciar o estoque entre as lojas, permitindo pesquisar e solicitar produtos de outras unidades online.</p>
-                            <p>Digite o nome ou código de barras do produto, pressione 'Buscar', e o sistema exibirá os resultados. Clique em 'Solicitar' no item desejado para iniciar o processo.</p>
+                            <p>Digite o nome ou código de barras do produto, pressione <strong class="text-slate-800">'Buscar'</strong>, e o sistema exibirá os resultados. Clique em <strong class="text-green-600 font-bold">'Solicitar'</strong> no item desejado para iniciar o processo.</p>
                          </div>
                     </div>
                     <div class="flex justify-center">
@@ -143,8 +144,19 @@
                     </div>
                     <div class="text-left md:order-1">
                         <h3 class="text-2xl font-bold text-slate-800 mb-4">Recebendo uma Solicitação</h3>
-                        <div class="text-slate-600 leading-relaxed space-y-3">
-                            <p>Uma caixa de diálogo aparecerá com os detalhes do pedido. Você pode confirmar as informações, alterar a quantidade e, por fim, 'Enviar' ou 'Rejeitar' a transferência.</p>
+                        <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 rounded-md my-4" role="alert">
+                            <div class="flex">
+                                <div class="py-1">
+                                    <svg class="fill-current h-6 w-6 text-orange-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm-1-5v-4h2v4h-2zm0 2h2v-2h-2v2z"/></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Atenção!</p>
+                                    <p class="text-sm">Antes de enviar, confirme todos os detalhes da solicitação (loja, produto e quantidade). Esta notificação aparecerá apenas uma vez.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-slate-600 leading-relaxed space-y-3 mt-4">
+                            <p>Uma caixa de diálogo aparecerá com os detalhes do pedido. Você pode confirmar as informações, alterar a quantidade e, por fim, <strong class="text-green-600 font-bold">'Enviar'</strong> ou <strong class="text-red-600 font-bold">'Rejeitar'</strong> a transferência.</p>
                             <p>Ao enviar, o estoque é atualizado automaticamente no sistema de ambas as lojas.</p>
                         </div>
                     </div>
@@ -159,10 +171,12 @@
         <section id="convenios" class="content-section py-16 md:py-24">
              <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
                 <div class="text-left">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-orange-500 mb-6">Consulta de Convênios</h2>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-orange-500 mb-6">Pesquisando Convênios</h2>
                     <div class="text-slate-600 leading-relaxed space-y-4">
                          <p>Uma ferramenta essencial para gerenciar informações financeiras de clientes e débitos pendentes em diferentes lojas.</p>
-                         <p>Pesquise clientes para ver detalhes sobre seus débitos em outras unidades, facilitando a coordenação, o acompanhamento de pagamentos e otimizando o controle financeiro.</p>
+                         <p><strong class="text-slate-800">1. Digite o Nome do Cliente:</strong> Na barra de pesquisa, digite o nome completo ou parte do nome do cliente que você deseja consultar.</p>
+                         <p><strong class="text-slate-800">2. Pesquise ou Pressione Enter:</strong> Após digitar, clique no botão 'Pesquisar' ou simplesmente pressione a tecla 'Enter' para iniciar a busca.</p>
+                         <p><strong class="text-slate-800">3. Visualize os Resultados:</strong> O sistema exibirá as informações de débitos pendentes do cliente nas outras lojas, se houver.</p>
                     </div>
                 </div>
                 <div class="flex justify-center">
