@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual do Usuário - Cesária App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados para complementar o Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #1a1a1a;
+        }
+
+        /* Estilo para a barra de rolagem (opcional, mas melhora a estética) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff9800;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e68900;
+        }
+
+        /* Classe para destacar o link de navegação ativo */
+        .nav-active {
+            color: #FFFFFF !important;
+            background-color: #fb923c; /* Laranja mais claro para destaque */
+        }
+        
+        /* Estilos para o conteúdo do acordeão */
+        .accordion-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-in-out;
+            visibility: hidden;
+        }
+        
+        /* Classe para expandir o conteúdo do acordeão */
+        .accordion-content.expanded {
+            max-height: 5000px; /* Um valor alto para garantir que o conteúdo caiba */
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Classe para girar o ícone de expandir/recolher */
+        .accordion-toggle.expanded {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Cabeçalho de Navegação Fixo -->
+    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-3">
+            <nav>
+                <ul class="flex justify-center space-x-2 md:space-x-4">
+                    <li><a href="#introducao" data-section="introducao" class="nav-link text-sm md:text-base font-bold text-orange-500 hover:bg-orange-100 py-2 px-4 transition-all duration-300">Introdução</a></li>
+                    <li><a href="#conversas" data-section="conversas" class="nav-link text-sm md:text-base font-bold text-orange-500 hover:bg-orange-100 py-2 px-4 transition-all duration-300">Conversas</a></li>
+                    <li><a href="#navegacao" data-section="navegacao" class="nav-link text-sm md:text-base font-bold text-orange-500 hover:bg-orange-100 py-2 px-4 transition-all duration-300">Navegação</a></li>
+                    <li><a href="#transferencia" data-section="transferencia" class="nav-link text-sm md:text-base font-bold text-orange-500 hover:bg-orange-100 py-2 px-4 transition-all duration-300">Transferência</a></li>
+                    <li><a href="#convenios" data-section="convenios" class="nav-link text-sm md:text-base font-bold text-orange-500 hover:bg-orange-100 py-2 px-4 transition-all duration-300">Convênios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto px-6 pt-24">
+        <!-- Seção Introdução -->
+        <section id="introducao" class="accordion-section py-12 md:py-20 border-b-2 border-orange-200">
+            <h2 class="accordion-header text-4xl md:text-6xl font-bold text-orange-500 cursor-pointer flex justify-between items-center w-full">
+                <span>Manual do Usuário Cesária App</span>
+                <span class="accordion-toggle text-orange-500 transition-transform duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                </span>
+            </h2>
+            <div class="accordion-content">
+                <div class="mt-8 text-lg text-gray-700 leading-relaxed max-w-4xl">
+                    <p>Bem-vindo ao manual do usuário do Cesária App! Este guia foi desenvolvido para ajudá-lo a navegar e utilizar todas as funcionalidades do aplicativo de forma eficiente.</p>
+                    <p class="mt-4">O Cesária App é uma ferramenta poderosa para comunicação e gestão, permitindo que você se conecte com lojas e contas, gerencie produtos e consulte convênios de forma integrada. Este manual abordará as principais seções do aplicativo, fornecendo descrições detalhadas e orientações passo a passo para cada funcionalidade.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Conversas -->
+        <section id="conversas" class="accordion-section py-12 md:py-20 border-b-2 border-orange-200">
+            <h2 class="accordion-header text-4xl md:text-6xl font-bold text-yellow-500 cursor-pointer flex justify-between items-center w-full">
+                <span>Seção de Conversas</span>
+                <span class="accordion-toggle text-yellow-500 transition-transform duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                </span>
+            </h2>
+            <div class="accordion-content">
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-lg text-gray-700 leading-relaxed">
+                        <p>A seção de Conversas é o centro de comunicação do Cesária App, permitindo que você interaja com todas as lojas e contas cadastradas. Aqui, você pode gerenciar suas conversas individuais e participar de grupos para comunicação em massa.</p>
+                        <p class="mt-4"><strong class="text-gray-900">Lista de Chats:</strong> Na tela inicial, você encontrará uma lista de todos os chats disponíveis. O status online é indicado por um ponto verde ao lado do nome, facilitando a identificação de quem está disponível para comunicação em tempo real.</p>
+                         <p class="mt-4"><strong class="text-gray-900">Envio de Mensagens:</strong> Você pode enviar mensagens normais (com Enter) ou urgentes, que geram notificações sonoras e visuais para garantir atenção imediata.</p>
+                    </div>
+                    <div>
+                        <img src="secao-conversas.png" alt="Tela de conversas do Cesária App" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Navegação -->
+        <section id="navegacao" class="accordion-section py-12 md:py-20 border-b-2 border-orange-200">
+            <h2 class="accordion-header text-4xl md:text-6xl font-bold text-orange-500 cursor-pointer flex justify-between items-center w-full">
+                <span>Navegação do Sistema</span>
+                 <span class="accordion-toggle text-orange-500 transition-transform duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                </span>
+            </h2>
+            <div class="accordion-content">
+                 <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-lg text-gray-700 leading-relaxed">
+                        <p>A barra de tarefas é o principal meio de navegação dentro do Cesária App, permitindo o acesso rápido a diferentes seções e funcionalidades. É acessada através do botão de três barras (menu hambúrguer).</p>
+                        <p class="mt-4">Ao clicar neste botão ou pressionar F1, a barra se expandirá, revelando opções que o levarão a outras páginas do aplicativo, como Transferência de Produtos e Consulta de Convênios.</p>
+                    </div>
+                    <div class="space-y-8">
+                        <img src="navegacao-menu.png" alt="Menu de navegação do Cesária App" class="w-full h-auto object-cover">
+                        <img src="navegacao-icones.png" alt="Ícones da barra de navegação" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Transferência de Produtos -->
+        <section id="transferencia" class="accordion-section py-12 md:py-20 border-b-2 border-orange-200">
+            <h2 class="accordion-header text-4xl md:text-6xl font-bold text-yellow-500 cursor-pointer flex justify-between items-center w-full">
+                <span>Transferência de Produtos</span>
+                <span class="accordion-toggle text-yellow-500 transition-transform duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                </span>
+            </h2>
+            <div class="accordion-content">
+                <div class="mt-8 text-lg text-gray-700 leading-relaxed space-y-12">
+                    <div>
+                        <p>Esta página é uma ferramenta valiosa para gerenciar o estoque entre as lojas. Permite pesquisar produtos em outras unidades online e solicitar a transferência diretamente pelo app, automatizando a baixa e adição de estoque.</p>
+                        <p class="mt-4"><strong class="text-gray-900">Como Solicitar:</strong> Digite o nome ou o código de barras do produto, pressione 'Buscar', e o sistema exibirá os resultados. Clique em 'Solicitar' no item desejado para iniciar o processo.</p>
+                        <img src="transferencia-busca.png" alt="Busca de produtos para transferência" class="mt-6 w-full h-auto object-cover">
+                    </div>
+                    <div>
+                        <p class="mt-4"><strong class="text-gray-900">Recebendo uma Solicitação:</strong> Uma caixa de diálogo aparecerá com os detalhes do pedido. Você pode confirmar as informações, alterar a quantidade e, por fim, 'Enviar' ou 'Rejeitar' a transferência. Ao enviar, o estoque é atualizado automaticamente.</p>
+                        <img src="transferencia-solicitacao.png" alt="Caixa de diálogo de solicitação de transferência" class="mt-6 w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Consulta de Convênios -->
+        <section id="convenios" class="accordion-section py-12 md:py-20">
+            <h2 class="accordion-header text-4xl md:text-6xl font-bold text-orange-500 cursor-pointer flex justify-between items-center w-full">
+                <span>Consulta de Convênios</span>
+                <span class="accordion-toggle text-orange-500 transition-transform duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                </span>
+            </h2>
+            <div class="accordion-content">
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-lg text-gray-700 leading-relaxed">
+                         <p>A página de Consulta de Convênios é uma ferramenta essencial para gerenciar informações financeiras relacionadas a clientes e débitos pendentes em diferentes lojas.</p>
+                         <p class="mt-4">Ela permite que você pesquise clientes e encontre detalhes sobre seus débitos em outras unidades, facilitando a coordenação e o acompanhamento de pagamentos e otimizando o controle financeiro entre as lojas.</p>
+                    </div>
+                    <div>
+                        <img src="consulta-convenios.png" alt="Tela de consulta de convênios" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.accordion-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            let currentExpandedSection = null;
+
+            // Função para COLAPSAR uma seção
+            const collapseSection = (section) => {
+                const content = section.querySelector('.accordion-content');
+                const toggle = section.querySelector('.accordion-toggle');
+                content.classList.remove('expanded');
+                if (toggle) toggle.classList.remove('expanded');
+            };
+
+            // Função para EXPANDIR uma seção
+            const expandSection = (section) => {
+                const content = section.querySelector('.accordion-content');
+                const toggle = section.querySelector('.accordion-toggle');
+                content.classList.add('expanded');
+                if (toggle) toggle.classList.add('expanded');
+            };
+            
+            // Função para atualizar o link de navegação ativo
+            const updateActiveNav = (id) => {
+                navLinks.forEach(link => {
+                    link.classList.remove('nav-active');
+                    if (id && link.getAttribute('data-section') === id) {
+                        link.classList.add('nav-active');
+                    }
+                });
+            };
+
+            // Função para lidar com o clique no cabeçalho
+            const handleToggle = (sectionToToggle) => {
+                const isAlreadyExpanded = sectionToToggle === currentExpandedSection;
+
+                if (currentExpandedSection && !isAlreadyExpanded) {
+                    collapseSection(currentExpandedSection);
+                }
+
+                if (isAlreadyExpanded) {
+                    collapseSection(sectionToToggle);
+                    currentExpandedSection = null;
+                    updateActiveNav(null);
+                } else {
+                    expandSection(sectionToToggle);
+                    currentExpandedSection = sectionToToggle;
+                    updateActiveNav(sectionToToggle.id);
+                }
+            };
+
+            // Adiciona evento de clique para cada cabeçalho de seção
+            sections.forEach(section => {
+                const header = section.querySelector('.accordion-header');
+                header.addEventListener('click', () => {
+                    handleToggle(section);
+                });
+            });
+
+            // Adiciona evento de clique para os links da navegação
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        // Rola suavemente até a seção
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 80, // Desconto para o cabeçalho fixo
+                            behavior: 'smooth'
+                        });
+                        
+                        // Expande a seção de destino (se não for a atual)
+                        if (targetSection !== currentExpandedSection) {
+                             setTimeout(() => {
+                                handleToggle(targetSection);
+                             }, 300); // Delay para sincronizar com a rolagem
+                        }
+                    }
+                });
+            });
+
+            // Expande a primeira seção ao carregar a página
+            if (sections.length > 0) {
+                setTimeout(() => {
+                    handleToggle(sections[0]);
+                }, 200);
+            }
+        });
+    </script>
+
+</body>
+</html>
+
