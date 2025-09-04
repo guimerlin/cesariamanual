@@ -9,86 +9,468 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #1a1a1a; color: #f8f8f8; }
-        .font-mono { font-family: 'Space Mono', monospace; }
-        .grainy-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><filter id="f"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23f)"/></svg>'); opacity: 0.08; z-index: 999; }
-        .content-card { background-color: rgba(35, 35, 35, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); }
-        .neo-button { transition: all 0.2s ease-in-out; border: 2px solid transparent;}
-        .neo-button:hover { transform: scale(1.05); border-color: #FFF3B0; }
-        .back-link { transition: color 0.3s ease; }
-        .back-link:hover { color: #EF4444; }
-    </style>
+    <link rel="stylesheet" href="../shared-styles.css">
 </head>
-<body class="antialiased">
-    <div class="grainy-overlay"></div>
-    
-    <header class="p-6">
-        <a href="../" class="back-link text-yellow-300 font-mono">&larr; Voltar para a Página Inicial</a>
-    </header>
+<body>
+    <nav class="main-nav">
+        <a href=".." class="nav-link">Início</a>
+        <a href="#introducao" class="nav-link active">Guia</a>
+        <a href="../apps" class="nav-link">Apps</a>
+        <a href="../radios" class="nav-link">Rádios</a>
+        <a href="../map" class="nav-link">Mapa</a>
+    </nav>
 
-    <main class="container mx-auto p-6 md:p-12">
-        <div class="text-center mb-16">
-            <h1 class="text-5xl md:text-7xl font-bold font-mono uppercase">Guia do Colaborador</h1>
-            <p class="mt-4 text-xl text-gray-400 max-w-3xl mx-auto">Informações essenciais para o seu dia a dia na Rede Cesária.</p>
-        </div>
-
-        <div class="space-y-12">
-            <!-- Seção 1 -->
-            <div class="content-card rounded-lg p-8">
-                <h2 class="text-3xl font-bold font-mono mb-4 text-yellow-300">1. Organização e seu papel</h2>
-                <div class="space-y-3 text-gray-300 text-lg">
-                    <p><strong class="text-white">Organização de produtos:</strong> Mantenha sempre a sua seção organizada e limpa.</p>
-                    <p><strong class="text-white">Controle de validade:</strong> Verifique a validade dos produtos regularmente e sinalize os que estão próximos do vencimento.</p>
-                    <p><strong class="text-white">Sistema de premiação:</strong> Mantenha os cadastros dos produtos sempre atualizados para que seu esforço seja reconhecido.</p>
+    <main>
+        <!-- SEÇÃO 1: INTRODUÇÃO -->
+        <section class="section" id="introducao">
+            <div class="main-container text-center animate-on-scroll">
+                <h1 class="text-6xl md:text-8xl font-bold main-title title-font">Guia do Colaborador</h1>
+                <p class="mt-6 text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Bem-vindo(a) à Rede Cesária! Este guia completo foi desenvolvido para que você entenda 
+                    como nossa rede funciona e tenha acesso rápido às informações mais importantes para o seu dia a dia. 
+                    Aqui você encontrará tudo o que precisa para trabalhar com excelência e fazer parte do nosso time de sucesso.
+                </p>
+                <div class="mt-8">
+                    <a href="#organizacao" class="btn-primary">Começar Leitura</a>
                 </div>
             </div>
+        </section>
 
-            <!-- Seção 2 -->
-            <div class="content-card rounded-lg p-8">
-                <h2 class="text-3xl font-bold font-mono mb-4 text-yellow-300">2. Nossos sistemas</h2>
+        <!-- SEÇÃO 2: ORGANIZAÇÃO E SEU PAPEL -->
+        <section class="section" id="organizacao">
+            <div class="main-container animate-on-scroll">
+                <h2 class="text-5xl font-bold mb-12 text-center section-title title-font">Organização e Seu Papel</h2>
+                
+                <div class="content-card mb-8">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        A organização é um dos nossos pilares fundamentais na Rede Cesária. Cada funcionário é responsável 
+                        por manter sua seção de trabalho organizada e bem abastecida, contribuindo para a excelência 
+                        no atendimento que nos caracteriza. Sua dedicação individual reflete diretamente na experiência 
+                        do cliente e no sucesso coletivo da nossa rede.
+                    </p>
+                </div>
+
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-2">Pharmagno ERP</h3>
-                        <p class="text-gray-300 text-lg mb-4">Nosso sistema de gestão para controle de estoque, vendas e operações.</p>
-                        <a href="../apps/pharmagno/manual/" class="neo-button inline-block py-2 px-6 bg-gray-700 text-white font-semibold rounded-md">Ver Manual do Pharmagno</a>
+                    <div class="content-card">
+                        <h3 class="text-2xl font-bold mb-4 title-font" style="color: #FBBF24;">📦 Organização de Produtos</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Mantenha sempre a sua seção organizada e limpa. Certifique-se de que os produtos estão 
+                            dispostos de forma clara e visível para o cliente. A organização visual facilita a localização 
+                            dos produtos pelos clientes e demonstra profissionalismo.
+                        </p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3 mt-2"></span>
+                                Produtos similares devem ficar agrupados
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3 mt-2"></span>
+                                Etiquetas de preço sempre visíveis e atualizadas
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3 mt-2"></span>
+                                Prateleiras sempre limpas e bem abastecidas
+                            </li>
+                        </ul>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-2">Cesária App</h3>
-                        <p class="text-gray-300 text-lg mb-4">Nossa ferramenta de comunicação e transferência de produtos entre lojas.</p>
-                        <a href="../apps/cesariaapp/manual/" class="neo-button inline-block py-2 px-6 bg-red-600 text-white font-semibold rounded-md">Ver Manual do Cesária App</a>
+
+                    <div class="content-card">
+                        <h3 class="text-2xl font-bold mb-4 title-font" style="color: #EF4444;">⏰ Controle de Validade</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Verifique a validade dos produtos regularmente. Remova os que estão próximos do vencimento 
+                            e cole etiquetas de aviso para facilitar a venda e evitar perdas. Este controle é essencial 
+                            para manter a qualidade dos produtos e a confiança dos clientes.
+                        </p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-red-400 rounded-full mr-3 mt-2"></span>
+                                Verificação diária dos produtos próximos ao vencimento
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-red-400 rounded-full mr-3 mt-2"></span>
+                                Etiquetas de desconto para produtos com validade próxima
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-red-400 rounded-full mr-3 mt-2"></span>
+                                Comunicação imediata de produtos vencidos
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-card mt-8">
+                    <h3 class="text-2xl font-bold mb-4 title-font" style="color: #10B981;">🏆 Sistema de Premiação</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        A dedicação é recompensada! Temos um sistema de premiação para os funcionários que se destacam 
+                        nas vendas de determinadas classes de produtos. Mantenha os cadastros dos produtos sempre 
+                        atualizados para que seu esforço seja reconhecido e recompensado adequadamente.
+                    </p>
+                    <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+                        <p class="text-green-800 font-semibold">💡 Dica Importante:</p>
+                        <p class="text-green-700">
+                            Verifique sempre os cadastros dos produtos, especialmente a classe e subclasse. 
+                            Isso garante uma melhor organização e que as premiações sejam calculadas corretamente.
+                        </p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Seção 3 e 4 -->
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="content-card rounded-lg p-8">
-                    <h2 class="text-3xl font-bold font-mono mb-4 text-yellow-300">3. Rádios das lojas</h2>
-                    <p class="text-gray-300 text-lg mb-4">Cada loja tem uma rádio exclusiva para criar um ambiente agradável.</p>
-                    <a href="../radios/" class="neo-button inline-block py-2 px-6 bg-gray-700 text-white font-semibold rounded-md">Acessar Rádios</a>
-                    <a href="#" class="neo-button inline-block py-2 px-6 bg-gray-700 text-white font-semibold rounded-md mt-2">Guia de Playlists</a>
+        <!-- SEÇÃO 3: SISTEMAS DE TRABALHO -->
+        <section class="section" id="sistemas">
+            <div class="main-container animate-on-scroll">
+                <h2 class="text-5xl font-bold mb-12 text-center section-title title-font">Nossos Sistemas de Trabalho</h2>
+                
+                <div class="content-card mb-8">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Utilizamos duas ferramentas principais para gerenciar o nosso dia a dia e manter a comunicação 
+                        eficiente entre as lojas. Estes sistemas foram escolhidos e configurados especificamente para 
+                        atender às necessidades da nossa rede, proporcionando agilidade e precisão nas operações.
+                    </p>
                 </div>
-                <div class="content-card rounded-lg p-8">
-                    <h2 class="text-3xl font-bold font-mono mb-4 text-yellow-300">4. Procedimentos de vendas</h2>
-                    <p class="text-gray-300 text-lg mb-4">Usamos o MagnoPDV para registrar as vendas e controlar o caixa.</p>
-                    <a href="../apps/magnopdv/manual/" class="neo-button inline-block py-2 px-6 bg-gray-700 text-white font-semibold rounded-md">Manual do MagnoPDV</a>
-                     <a href="#" class="neo-button inline-block py-2 px-6 bg-gray-700 text-white font-semibold rounded-md mt-2">Ver Procedimentos</a>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="content-card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-400 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">💼</span>
+                            </div>
+                            <h3 class="text-2xl font-bold title-font" style="color: #38BDF8;">Pharmagno ERP</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            O Pharmagno é o nosso sistema de gestão empresarial, onde controlamos estoque, vendas, 
+                            promoções e todas as operações financeiras da rede. É uma ferramenta robusta que centraliza 
+                            todas as informações importantes para a gestão eficiente das nossas lojas.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Controle completo de estoque</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Gestão de vendas e promoções</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Relatórios financeiros detalhados</span>
+                            </div>
+                        </div>
+                        <a href="../apps/pharmagno/" class="btn-primary">Manual Completo do Pharmagno</a>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-red-400 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">📱</span>
+                            </div>
+                            <h3 class="text-2xl font-bold title-font" style="color: #EF4444;">Cesária App</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Desenvolvemos o Cesária App especificamente para facilitar a comunicação entre as lojas 
+                            da nossa rede. Esta ferramenta exclusiva permite uma integração perfeita entre todas 
+                            as unidades, otimizando processos e melhorando a eficiência operacional.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Solicitar produtos em falta na sua unidade</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Enviar avisos urgentes para outras lojas</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Realizar transferências automáticas de produtos</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                                <span class="text-gray-700">Consultar estoque e dados de clientes</span>
+                            </div>
+                        </div>
+                        <a href="../apps/cesariaapp/" class="btn-primary">Manual Completo do Cesária App</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-             <!-- Seção 5 -->
-            <div class="content-card rounded-lg p-8">
-                <h2 class="text-3xl font-bold font-mono mb-4 text-yellow-300">5. Regras e avisos importantes</h2>
-                 <div class="space-y-4 text-gray-300 text-lg">
-                    <p><strong class="text-white">Cronograma e tarefas:</strong> Utilize o cronograma diário do supervisor e inclua tarefas de reposição e limpeza.</p>
-                    <p><strong class="text-white">Transferências:</strong> Usuários treinados no chat não precisam mais emitir cupom. É obrigatório comunicar a transferência no grupo do motoboy.</p>
-                    <p><strong class="text-white">Caixa:</strong> Um novo login <span class="font-mono text-yellow-300">CAIXA</span>, sem senha, deve ser usado para abertura no PDV. Peça para a adm. Daniele alterar senhas compartilhadas.</p>
-                    <p><strong class="text-white">Máquina de cartão:</strong> O Bruno tem máquina própria, não é preciso ceder uma da loja.</p>
-                    <p><strong class="text-white">Suporte:</strong> Em caso de dúvidas, procure a adm. <span class="font-semibold text-white">Daniele Correa</span> ou o supervisor <span class="font-semibold text-white">Leonardo Gabriel</span>.</p>
+        <!-- SEÇÃO 4: RÁDIOS DAS LOJAS -->
+        <section class="section" id="radios">
+            <div class="main-container animate-on-scroll">
+                <h2 class="text-5xl font-bold mb-12 text-center section-title title-font">Rádios das Lojas</h2>
+                
+                <div class="content-card mb-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-pink-400 rounded-lg flex items-center justify-center mr-6">
+                            <span class="text-3xl">🎵</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold title-font" style="color: #EC4899;">Ambiente Musical Personalizado</h3>
+                            <p class="text-gray-600">Cada loja tem sua identidade sonora única</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Cada loja da Rede Cesária tem uma rádio exclusiva, com uma seleção de músicas e anúncios 
+                        personalizados para criar um ambiente agradável e acolhedor para nossos clientes. A música 
+                        ambiente é uma ferramenta importante para criar uma experiência positiva de compra e 
+                        fortalecer a identidade da nossa marca.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-pink-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-pink-800 mb-2">🎧 Como Acessar</h4>
+                            <p class="text-pink-700">
+                                As rádios estão disponíveis através do nosso portal. Basta escolher a da sua loja 
+                                e dar o play para começar a transmissão.
+                            </p>
+                        </div>
+                        <div class="bg-pink-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-pink-800 mb-2">🎼 Personalização</h4>
+                            <p class="text-pink-700">
+                                Temos um guia sobre como configurar playlists próprias. A leitura é recomendada 
+                                antes de fazer qualquer alteração.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400 mb-6">
+                        <p class="text-yellow-800 font-semibold">⚠️ Importante:</p>
+                        <p class="text-yellow-700">
+                            Lembre-se de que o ambiente deve ser acolhedor para todos. Escolha músicas com conteúdo 
+                            apropriado para adultos, crianças e idosos. Evite músicas com linguagem inadequada ou 
+                            temas controversos.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../radios/" class="btn-primary">Acessar Rádios das Lojas</a>
+                        <a href="#" class="btn-secondary">Guia de Configuração de Playlists</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- SEÇÃO 5: PROCEDIMENTOS DE VENDAS -->
+        <section class="section" id="vendas">
+            <div class="main-container animate-on-scroll">
+                <h2 class="text-5xl font-bold mb-12 text-center section-title title-font">Procedimentos de Vendas</h2>
+                
+                <div class="content-card mb-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-400 rounded-lg flex items-center justify-center mr-6">
+                            <span class="text-3xl">💰</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold title-font" style="color: #10B981;">MagnoPDV - Ponto de Venda</h3>
+                            <p class="text-gray-600">Sistema integrado para todas as operações de venda</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Para registrar as vendas e fazer outras operações diárias, utilizamos o MagnoPDV, que é o 
+                        ponto de venda do nosso sistema Pharmagno. O ícone do MagnoPDV é uma moeda, e é através 
+                        dele que você dará baixa nas vendas, consultará estoque e preços, e fará o controle de caixa.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-6">
+                        <div class="bg-green-50 p-4 rounded-lg text-center">
+                            <div class="text-3xl mb-2">🛒</div>
+                            <h4 class="font-bold text-green-800 mb-2">Registro de Vendas</h4>
+                            <p class="text-green-700 text-sm">
+                                Baixa automática no estoque e emissão de cupom fiscal
+                            </p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg text-center">
+                            <div class="text-3xl mb-2">📊</div>
+                            <h4 class="font-bold text-green-800 mb-2">Consulta de Estoque</h4>
+                            <p class="text-green-700 text-sm">
+                                Verificação em tempo real da disponibilidade de produtos
+                            </p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg text-center">
+                            <div class="text-3xl mb-2">💳</div>
+                            <h4 class="font-bold text-green-800 mb-2">Controle de Caixa</h4>
+                            <p class="text-green-700 text-sm">
+                                Abertura, fechamento e controle de todas as transações
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../apps/magnopdv/" class="btn-primary">Manual Completo do MagnoPDV</a>
+                        <a href="#" class="btn-secondary">Procedimentos Detalhados de Vendas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 6: REGRAS E AVISOS IMPORTANTES -->
+        <section class="section" id="regras">
+            <div class="main-container animate-on-scroll">
+                <h2 class="text-5xl font-bold mb-12 text-center section-title title-font">Regras e Avisos Importantes</h2>
+                
+                <div class="content-card mb-8">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        Para manter a organização e garantir que tudo funcione bem, temos algumas regras e 
+                        procedimentos que devem ser seguidos rigorosamente. Estas diretrizes foram estabelecidas 
+                        para otimizar nossos processos e garantir a qualidade do atendimento.
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Cronograma e Tarefas -->
+                    <div class="content-card">
+                        <h3 class="text-2xl font-bold mb-4 title-font" style="color: #FBBF24;">📅 Cronograma e Tarefas Diárias</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Utilize o cronograma diário enviado pelo supervisor Leonardo Gabriel para organizar suas tarefas. 
+                            Este cronograma é essencial para manter a produtividade e garantir que todas as atividades 
+                            importantes sejam realizadas.
+                        </p>
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-yellow-800 mb-2">Tarefas Obrigatórias Diárias:</h4>
+                            <ul class="space-y-2 text-yellow-700">
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3 mt-2"></span>
+                                    Reposição de papel toalha nos dispensers da sala de aplicação
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3 mt-2"></span>
+                                    Reposição de papel toalha nos dispensers do banheiro e copa
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3 mt-2"></span>
+                                    Retirada diária do lixo de todas as áreas
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Transferências -->
+                    <div class="content-card">
+                        <h3 class="text-2xl font-bold mb-4 title-font" style="color: #38BDF8;">🔄 Transferências de Produtos</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            O processo de transferência de produtos entre lojas foi otimizado para maior agilidade. 
+                            Funcionários que já foram treinados para usar o chat para transferências automáticas 
+                            não precisam mais emitir cupom físico.
+                        </p>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-800 mb-2">⚠️ Regra Obrigatória:</h4>
+                            <p class="text-blue-700">
+                                É obrigatório comunicar a transferência no grupo do motoboy, independentemente 
+                                do método utilizado (chat automático ou cupom físico).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Caixa -->
+                    <div class="content-card">
+                        <h3 class="text-2xl font-bold mb-4 title-font" style="color: #EF4444;">💳 Abertura e Fechamento de Caixa</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Implementamos um novo sistema de login para maior segurança e controle. Um novo login 
+                            chamado <span class="highlight font-mono">CAIXA</span> foi criado especificamente para 
+                            a abertura do caixa no PDV.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-red-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-red-800 mb-2">🔑 Novo Sistema de Login</h4>
+                                <ul class="space-y-2 text-red-700 text-sm">
+                                    <li>• Login: <span class="font-mono font-bold">CAIXA</span></li>
+                                    <li>• Sem senha necessária</li>
+                                    <li>• Apenas para operações do PDV</li>
+                                    <li>• Não serve para o Pharmagno gerencial</li>
+                                </ul>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-red-800 mb-2">🔒 Segurança</h4>
+                                <p class="text-red-700 text-sm">
+                                    Para quem já conhece senhas de outros funcionários, procure a administradora 
+                                    Daniele para que as senhas sejam alteradas imediatamente.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-red-100 p-4 rounded-lg mt-4 border-l-4 border-red-400">
+                            <p class="text-red-800 font-semibold">
+                                Lembrem-se: A responsabilidade por um bom fechamento de caixa é de todos!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Máquina de Cartão -->
+                    <div class="content-card">
+                        <h3 class="text-2xl font-bold mb-4 title-font" style="color: #8B5CF6;">💳 Máquina de Cartão - Bruno</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            O funcionário Bruno possui sua própria máquina de cartão e já foi devidamente instruído 
+                            sobre todos os procedimentos necessários.
+                        </p>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <p class="text-purple-800 font-semibold">
+                                ✅ Não é necessário fornecer nenhuma máquina da loja para o Bruno. 
+                                Ele já possui equipamento próprio e conhece todos os procedimentos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Suporte -->
+                    <div class="content-card">
+                        <h3 class="text-2xl font-bold mb-4 title-font" style="color: #10B981;">🆘 Suporte e Contatos</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Em caso de dúvidas, problemas técnicos ou necessidade de orientação, nossa equipe 
+                            de suporte está sempre disponível para ajudar.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-green-800 mb-2">👩‍💼 Administração</h4>
+                                <p class="text-green-700 font-semibold">Daniele Correa</p>
+                                <p class="text-green-600 text-sm">
+                                    Responsável por questões administrativas, alteração de senhas, 
+                                    procedimentos gerais e suporte técnico.
+                                </p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-green-800 mb-2">👨‍💼 Supervisão</h4>
+                                <p class="text-green-700 font-semibold">Leonardo Gabriel</p>
+                                <p class="text-green-600 text-sm">
+                                    Responsável por cronogramas diários, orientações operacionais 
+                                    e coordenação das atividades.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 7: CONCLUSÃO -->
+        <section class="section" id="conclusao">
+            <div class="main-container text-center animate-on-scroll">
+                <h2 class="text-4xl font-bold section-title title-font mb-8">Bem-vindo(a) ao Time!</h2>
+                <div class="content-card max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Esperamos que este guia completo ajude você a se adaptar rapidamente à nossa equipe e 
+                        aos nossos processos. A Rede Cesária valoriza cada colaborador e acredita que o sucesso 
+                        coletivo depende do comprometimento individual de cada um.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        Lembre-se: estamos aqui para apoiá-lo em sua jornada conosco. Não hesite em buscar 
+                        ajuda sempre que necessário. Juntos, continuaremos construindo uma rede de drogarias 
+                        de excelência, focada no atendimento de qualidade e no bem-estar de nossos clientes.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="../apps/" class="btn-primary">Explorar Sistemas</a>
+                        <a href=".." class="btn-secondary">Voltar ao Início</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="text-center p-6 text-gray-500 bg-white/50 backdrop-blur-sm">
+        <p>&copy; 2024 Rede Cesária. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../shared-scripts.js"></script>
 </body>
 </html>
+

@@ -3,52 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rádios - Rede Cesária</title>
+    <title>Rádios da Rede - Rede Cesária</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #1a1a1a; color: #f8f8f8; }
-        .font-mono { font-family: 'Space Mono', monospace; }
-        .grainy-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><filter id="f"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23f)"/></svg>'); opacity: 0.08; z-index: 999; }
-        .radio-card { background-color: rgba(35, 35, 35, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; backdrop-filter: blur(8px); }
-        .radio-card:hover { transform: translateY(-5px) scale(1.02); border-color: #FFF3B0; }
-        .back-link { transition: color 0.3s ease; }
-        .back-link:hover { color: #EF4444; }
-    </style>
+    <link rel="stylesheet" href="../shared-styles.css">
 </head>
-<body class="antialiased">
-    <div class="grainy-overlay"></div>
-    
-    <header class="p-6">
-        <a href="../" class="back-link text-yellow-300 font-mono">&larr; Voltar para a Página Inicial</a>
-    </header>
+<body>
+    <nav class="main-nav">
+        <a href=".." class="nav-link">Início</a>
+        <a href="../guia" class="nav-link">Guia</a>
+        <a href="../apps" class="nav-link">Apps</a>
+        <a href="#radios" class="nav-link active">Rádios</a>
+        <a href="../map" class="nav-link">Mapa</a>
+    </nav>
 
-    <main class="min-h-screen flex flex-col justify-center items-center p-6 md:p-12 -mt-16">
-        <div class="text-center">
-            <h1 class="text-5xl md:text-7xl font-bold font-mono uppercase">Rádios da Rede<span class="text-red-500">.</span></h1>
-            <p class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto">Selecione a rádio da sua loja e dê o play para criar o ambiente perfeito.</p>
-        </div>
+    <main>
+        <!-- SEÇÃO 1: INTRODUÇÃO -->
+        <section class="section" id="radios">
+            <div class="main-container text-center animate-on-scroll">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-20 h-20 bg-pink-400 rounded-lg flex items-center justify-center mr-6">
+                        <span class="text-4xl">🎵</span>
+                    </div>
+                    <div>
+                        <h1 class="text-6xl md:text-8xl font-bold main-title title-font">Rádios da Rede</h1>
+                        <p class="text-xl text-gray-600">Ambiente Musical Personalizado</p>
+                    </div>
+                </div>
+                <p class="mt-6 text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Cada loja da Rede Cesária possui sua própria rádio exclusiva, cuidadosamente selecionada 
+                    para criar o ambiente perfeito para nossos clientes. Selecione a rádio da sua loja 
+                    e dê o play para criar o ambiente musical ideal.
+                </p>
+            </div>
+        </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 w-full max-w-6xl">
-            <a href="http://radios.cesaria.shop/public/vista" target="_blank" class="block radio-card rounded-lg p-8 text-center">
-                <h2 class="text-3xl font-bold font-mono">Vista Alegre</h2>
-            </a>
-            <a href="http://radios.cesaria.shop/public/luz" target="_blank" class="block radio-card rounded-lg p-8 text-center">
-                <h2 class="text-3xl font-bold font-mono">Jardim da Luz</h2>
-            </a>
-            <a href="http://radios.cesaria.shop/public/taboao" target="_blank" class="block radio-card rounded-lg p-8 text-center">
-                <h2 class="text-3xl font-bold font-mono">Taboão</h2>
-            </a>
-            <a href="http://radios.cesaria.shop/public/salete" target="_blank" class="block radio-card rounded-lg p-8 text-center">
-                <h2 class="text-3xl font-bold font-mono">Jardim Salete</h2>
-            </a>
-            <a href="http://radios.cesaria.shop/public/pinheiros" target="_blank" class="block radio-card rounded-lg p-8 text-center">
-                <h2 class="text-3xl font-bold font-mono">Parque Pinheiros</h2>
-            </a>
-        </div>
+        <!-- SEÇÃO 2: RÁDIOS DAS LOJAS -->
+        <section class="section" id="lojas">
+            <div class="main-container animate-on-scroll">
+                <h2 class="text-5xl font-bold mb-12 text-center section-title title-font">Nossas Estações</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Vista Alegre -->
+                    <a href="http://radios.cesaria.shop/public/vista" target="_blank" class="content-card text-center hover:scale-105 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-pink-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">📻</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 title-font" style="color: #EC4899;">Vista Alegre</h3>
+                        <p class="text-gray-600 mb-4">Programação diversificada e acolhedora</p>
+                        <div class="bg-pink-50 p-4 rounded-lg mb-4">
+                            <p class="text-pink-700 text-sm">🎧 Música ambiente relaxante</p>
+                            <p class="text-pink-700 text-sm">📢 Anúncios promocionais</p>
+                        </div>
+                        <span class="btn-primary inline-block">Ouvir Agora</span>
+                    </a>
+
+                    <!-- Jardim da Luz -->
+                    <a href="http://radios.cesaria.shop/public/luz" target="_blank" class="content-card text-center hover:scale-105 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-blue-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">📻</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 title-font" style="color: #38BDF8;">Jardim da Luz</h3>
+                        <p class="text-gray-600 mb-4">Ambiente urbano e dinâmico</p>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <p class="text-blue-700 text-sm">🎵 Hits populares</p>
+                            <p class="text-blue-700 text-sm">ℹ️ Informações de saúde</p>
+                        </div>
+                        <span class="btn-primary inline-block">Ouvir Agora</span>
+                    </a>
+
+                    <!-- Taboão -->
+                    <a href="http://radios.cesaria.shop/public/taboao" target="_blank" class="content-card text-center hover:scale-105 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-green-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">📻</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 title-font" style="color: #10B981;">Taboão</h3>
+                        <p class="text-gray-600 mb-4">Programação focada no público local</p>
+                        <div class="bg-green-50 p-4 rounded-lg mb-4">
+                            <p class="text-green-700 text-sm">🎶 Música contemporânea</p>
+                            <p class="text-green-700 text-sm">🏪 Promoções especiais</p>
+                        </div>
+                        <span class="btn-primary inline-block">Ouvir Agora</span>
+                    </a>
+
+                    <!-- Jardim Salete -->
+                    <a href="http://radios.cesaria.shop/public/salete" target="_blank" class="content-card text-center hover:scale-105 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">📻</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 title-font" style="color: #FBBF24;">Jardim Salete</h3>
+                        <p class="text-gray-600 mb-4">Programação familiar e acolhedora</p>
+                        <div class="bg-yellow-50 p-4 rounded-lg mb-4">
+                            <p class="text-yellow-700 text-sm">👨‍👩‍👧‍👦 Música para toda família</p>
+                            <p class="text-yellow-700 text-sm">💊 Dicas de saúde</p>
+                        </div>
+                        <span class="btn-primary inline-block">Ouvir Agora</span>
+                    </a>
+
+                    <!-- Parque Pinheiros -->
+                    <a href="http://radios.cesaria.shop/public/pinheiros" target="_blank" class="content-card text-center hover:scale-105 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-purple-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">📻</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 title-font" style="color: #8B5CF6;">Parque Pinheiros</h3>
+                        <p class="text-gray-600 mb-4">Ambiente comunitário e próximo</p>
+                        <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                            <p class="text-purple-700 text-sm">🏘️ Música regional</p>
+                            <p class="text-purple-700 text-sm">📋 Avisos da comunidade</p>
+                        </div>
+                        <span class="btn-primary inline-block">Ouvir Agora</span>
+                    </a>
+
+                    <!-- Configuração -->
+                    <div class="content-card text-center">
+                        <div class="w-16 h-16 bg-red-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🎛️</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 title-font" style="color: #EF4444;">Configuração</h3>
+                        <p class="text-gray-600 mb-4">Guia para personalizar playlists</p>
+                        <div class="bg-red-50 p-4 rounded-lg mb-4">
+                            <p class="text-red-700 text-sm">📋 Diretrizes importantes</p>
+                            <p class="text-red-700 text-sm">⚙️ Como configurar</p>
+                        </div>
+                        <a href="manual/" class="btn-primary">Ver Guia</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: CONFIGURAÇÃO DE PLAYLISTS -->
+        <section class="section" id="configuracao">
+            <div class="main-container animate-on-scroll">
+                <h2 class="text-5xl font-bold mb-12 text-center section-title title-font">Configuração de Playlists</h2>
+                
+                <div class="content-card">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-indigo-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <span class="text-4xl">🎼</span>
+                        </div>
+                        <h3 class="text-3xl font-bold title-font" style="color: #6366F1;">Personalização Musical</h3>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8 text-center">
+                        Temos um guia completo sobre como configurar playlists próprias para cada loja. 
+                        A personalização da programação musical é uma ferramenta importante para criar 
+                        a identidade única de cada unidade da nossa rede.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-indigo-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-indigo-800 mb-4">📋 Diretrizes Importantes</h4>
+                            <ul class="space-y-3 text-indigo-700">
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 mt-2"></span>
+                                    Conteúdo apropriado para todas as idades
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 mt-2"></span>
+                                    Evitar músicas com linguagem inadequada
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 mt-2"></span>
+                                    Manter volume em nível confortável
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 mt-2"></span>
+                                    Variar estilos musicais ao longo do dia
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-indigo-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-indigo-800 mb-4">⚙️ Como Configurar</h4>
+                            <ul class="space-y-3 text-indigo-700">
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 mt-2"></span>
+                                    Acesse o painel de controle da rádio
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 mt-2"></span>
+                                    Selecione a categoria de música desejada
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 mt-2"></span>
+                                    Configure horários específicos
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 mt-2"></span>
+                                    Teste antes de ativar na loja
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400 mt-8">
+                        <p class="text-yellow-800 font-semibold mb-2">⚠️ Leitura Obrigatória</p>
+                        <p class="text-yellow-700">
+                            A leitura do guia de configuração de playlists é recomendada antes de fazer 
+                            qualquer alteração na programação musical. Lembre-se de que o ambiente deve 
+                            ser acolhedor para adultos, crianças e idosos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="text-center p-6 text-gray-500 bg-white/50 backdrop-blur-sm">
+        <p>&copy; 2024 Rede Cesária. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../shared-scripts.js"></script>
 </body>
 </html>
