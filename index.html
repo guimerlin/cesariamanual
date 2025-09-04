@@ -1,200 +1,333 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bem-vindo à Rede Cesária</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="shared-styles.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shared-styles.css" />
+  </head>
+  <body>
     <nav class="main-nav">
-        <a href="#inicio" class="nav-link active">Início</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-        <a href="#ferramentas" class="nav-link">Ferramentas</a>
-        <a href="#contato" class="nav-link">Contato</a>
+      <a href="#inicio" class="nav-link active">Início</a>
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#ferramentas" class="nav-link">Ferramentas</a>
+      <a href="#contato" class="nav-link">Contato</a>
     </nav>
 
     <main>
-        <!-- PÁGINA 1: INÍCIO -->
-        <section class="section" id="inicio">
-            <div class="text-center animate-on-scroll">
-                <h1 class="text-6xl md:text-8xl font-bold main-title title-font">Rede Cesária<span style="color: #EF4444;">.</span></h1>
-                <p class="mt-6 text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Seu portal completo de acesso às ferramentas, guias e sistemas para o dia a dia. 
-                    Tudo o que você precisa para trabalhar com excelência em nossa rede de drogarias.
+      <!-- PÁGINA 1: INÍCIO -->
+      <section class="section" id="inicio">
+        <div class="text-center animate-on-scroll">
+          <h1 class="text-6xl md:text-8xl font-bold main-title title-font">
+            Rede Cesária<span style="color: #ef4444">.</span>
+          </h1>
+          <p
+            class="mt-6 text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          >
+            Seu portal completo de acesso às ferramentas, guias e sistemas para
+            o dia a dia. Tudo o que você precisa para trabalhar com excelência
+            em nossa rede de drogarias.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#ferramentas" class="btn-primary">Explorar Ferramentas</a>
+            <a href="#sobre" class="btn-secondary">Conhecer a Rede</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PÁGINA 2: SOBRE A REDE -->
+      <section class="section" id="sobre">
+        <div class="main-container animate-on-scroll">
+          <h2
+            class="text-5xl font-bold mb-12 text-center section-title title-font"
+          >
+            Sobre Nós
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div class="content-card">
+                <h3
+                  class="text-2xl font-bold mb-4 title-font"
+                  style="color: #fbbf24"
+                >
+                  Excelência no Atendimento
+                </h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  A Rede Cesária é uma rede de drogarias que preza pela
+                  <span class="highlight">excelência no atendimento</span>
+                  e no relacionamento com os clientes. Nossa missão é
+                  proporcionar saúde e bem-estar para toda a comunidade.
                 </p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#ferramentas" class="btn-primary">Explorar Ferramentas</a>
-                    <a href="#sobre" class="btn-secondary">Conhecer a Rede</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- PÁGINA 2: SOBRE A REDE -->
-        <section class="section" id="sobre">
-            <div class="main-container animate-on-scroll">
-                <h2 class="text-5xl font-bold mb-12 text-center section-title title-font">Sobre Nós</h2>
-                
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="content-card">
-                            <h3 class="text-2xl font-bold mb-4 title-font" style="color: #FBBF24;">Excelência no Atendimento</h3>
-                            <p class="text-gray-700 leading-relaxed mb-4">
-                                A Rede Cesária é uma rede de drogarias que preza pela <span class="highlight">excelência no atendimento</span> 
-                                e no relacionamento com os clientes. Nossa missão é proporcionar saúde e bem-estar para toda a comunidade.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed">
-                                Atualmente, temos <strong>5 lojas</strong> estrategicamente localizadas em Embu das Artes, 
-                                Taboão da Serra e outras regiões, sempre próximas de você.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <div class="content-card">
-                            <h3 class="text-2xl font-bold mb-4 title-font" style="color: #EF4444;">Nossos Valores</h3>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-center">
-                                    <span class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                                    Organização e dedicação em cada seção
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
-                                    Sistema de premiação por desempenho
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                                    Tecnologia integrada para eficiência
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                                    Ambiente acolhedor para todos
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PÁGINA 3: FERRAMENTAS -->
-        <section class="section" id="ferramentas">
-            <div class="main-container">
-                <h2 class="text-5xl font-bold mb-16 text-center section-title title-font animate-on-scroll">Nossas Ferramentas</h2>
-                
-                <div class="grid-responsive">
-                    <!-- Card Guia -->
-                    <div class="content-card animate-on-scroll" style="transition-delay: 0.1s;">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-2xl">📋</span>
-                            </div>
-                            <h3 class="text-2xl font-bold title-font" style="color: #FBBF24;">Guia do Colaborador</h3>
-                        </div>
-                        <p class="text-gray-700 mb-6 leading-relaxed">
-                            Tudo o que você precisa saber para começar com o pé direito na nossa equipe. 
-                            Processos, sistemas, regras e procedimentos detalhados.
-                        </p>
-                        <a href="guia/" class="btn-primary">Acessar Guia</a>
-                    </div>
-
-                    <!-- Card Apps -->
-                    <div class="content-card animate-on-scroll" style="transition-delay: 0.2s;">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-blue-400 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-2xl">💻</span>
-                            </div>
-                            <h3 class="text-2xl font-bold title-font" style="color: #38BDF8;">Aplicações Internas</h3>
-                        </div>
-                        <p class="text-gray-700 mb-6 leading-relaxed">
-                            Acesse os manuais e informações sobre nossos sistemas principais: 
-                            Cesária App, Pharmagno ERP e MagnoPDV.
-                        </p>
-                        <a href="apps/" class="btn-primary">Ver Aplicações</a>
-                    </div>
-
-                    <!-- Card Rádios -->
-                    <div class="content-card animate-on-scroll" style="transition-delay: 0.3s;">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-pink-400 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-2xl">🎵</span>
-                            </div>
-                            <h3 class="text-2xl font-bold title-font" style="color: #EC4899;">Rádios da Rede</h3>
-                        </div>
-                        <p class="text-gray-700 mb-6 leading-relaxed">
-                            Links diretos para as rádios exclusivas de cada uma de nossas lojas. 
-                            Crie o ambiente perfeito para os clientes.
-                        </p>
-                        <a href="radios/" class="btn-primary">Ouvir Rádios</a>
-                    </div>
-
-                    <!-- Card Mapa -->
-                    <div class="content-card animate-on-scroll" style="transition-delay: 0.4s;">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-2xl">🗺️</span>
-                            </div>
-                            <h3 class="text-2xl font-bold title-font" style="color: #10B981;">Localização das Lojas</h3>
-                        </div>
-                        <p class="text-gray-700 mb-6 leading-relaxed">
-                            Encontre todas as nossas unidades com endereços completos, 
-                            horários de funcionamento e informações de contato.
-                        </p>
-                        <a href="map/" class="btn-primary">Ver Mapa</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PÁGINA 4: CONTATO -->
-        <section class="section" id="contato">
-            <div class="main-container text-center animate-on-scroll">
-                <h2 class="text-4xl font-bold section-title title-font mb-8">Precisa de Ajuda?</h2>
-                <p class="text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
-                    Nossa equipe está sempre pronta para ajudar. Entre em contato com nossos responsáveis 
-                    para esclarecimentos, suporte técnico ou qualquer dúvida.
+                <p class="text-gray-700 leading-relaxed">
+                  Atualmente, temos <strong>5 lojas</strong> estrategicamente
+                  localizadas em Embu das Artes, Taboão da Serra e outras
+                  regiões, sempre próximas de você.
                 </p>
-                
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="content-card text-left">
-                        <h3 class="text-xl font-bold mb-4 title-font" style="color: #FBBF24;">Administração</h3>
-                        <p class="text-gray-700 mb-2"><strong>Daniele Corrêa</strong></p>
-                        <p class="text-gray-600">Administradora responsável por questões gerais, senhas e procedimentos administrativos.</p>
-                    </div>
-                    
-                    <div class="content-card text-left">
-                        <h3 class="text-xl font-bold mb-4 title-font" style="color: #EF4444;">Supervisão</h3>
-                        <p class="text-gray-700 mb-2"><strong>Leonardo Gabriel</strong></p>
-                        <p class="text-gray-600">Supervisor responsável por cronogramas, tarefas diárias e orientações operacionais.</p>
-                    </div>
-                    
-                    <div class="content-card text-left">
-                        <h3 class="text-xl font-bold mb-4 title-font" style="color: #00f72d;">Suporte e TI</h3>
-                        <p class="text-gray-700 mb-2"><strong>Luiz Guilherme</strong></p>
-                        <p class="text-gray-600">Responsável por gerenciamento de computadores e Sistemas das Lojas.</p>
-                    </div>
-
-
-                    <div class="content-card text-left">
-                        <h3 class="text-xl font-bold mb-4 title-font" style="color: #ff01c4;">Marketing</h3>
-                        <p class="text-gray-700 mb-2"><strong>Maria Vitória</strong></p>
-                        <p class="text-gray-600">Responsável por promoções, divulgação e anúncios de Marketing da Rede.</p>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
+
+            <div>
+              <div class="content-card">
+                <h3
+                  class="text-2xl font-bold mb-4 title-font"
+                  style="color: #ef4444"
+                >
+                  Nossos Valores
+                </h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-center">
+                    <span
+                      class="w-2 h-2 bg-yellow-400 rounded-full mr-3"
+                    ></span>
+                    Organização e dedicação em cada seção
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                    Sistema de premiação por desempenho
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                    Tecnologia integrada para eficiência
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                    Ambiente acolhedor para todos
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PÁGINA 3: FERRAMENTAS -->
+      <section class="section" id="ferramentas">
+        <div class="main-container">
+          <h2
+            class="text-5xl font-bold mb-16 text-center section-title title-font animate-on-scroll"
+          >
+            Nossas Ferramentas
+          </h2>
+
+          <div class="grid-responsive">
+            <!-- Card Guia -->
+            <div
+              class="content-card animate-on-scroll"
+              style="transition-delay: 0.1s"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mr-4"
+                >
+                  <span class="text-2xl">📋</span>
+                </div>
+                <h3
+                  class="text-2xl font-bold title-font"
+                  style="color: #fbbf24"
+                >
+                  Guia do Colaborador
+                </h3>
+              </div>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                Tudo o que você precisa saber para começar com o pé direito na
+                nossa equipe. Processos, sistemas, regras e procedimentos
+                detalhados.
+              </p>
+              <a href="guia/" class="btn-primary">Acessar Guia</a>
+            </div>
+
+            <!-- Card Apps -->
+            <div
+              class="content-card animate-on-scroll"
+              style="transition-delay: 0.2s"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 bg-blue-400 rounded-lg flex items-center justify-center mr-4"
+                >
+                  <span class="text-2xl">💻</span>
+                </div>
+                <h3
+                  class="text-2xl font-bold title-font"
+                  style="color: #38bdf8"
+                >
+                  Aplicações Internas
+                </h3>
+              </div>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                Acesse os manuais e informações sobre nossos sistemas
+                principais: Cesária App, Pharmagno ERP e MagnoPDV.
+              </p>
+              <a href="apps/" class="btn-primary">Ver Aplicações</a>
+            </div>
+
+            <!-- Card Rádios -->
+            <div
+              class="content-card animate-on-scroll"
+              style="transition-delay: 0.3s"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 bg-pink-400 rounded-lg flex items-center justify-center mr-4"
+                >
+                  <span class="text-2xl">🎵</span>
+                </div>
+                <h3
+                  class="text-2xl font-bold title-font"
+                  style="color: #ec4899"
+                >
+                  Rádios da Rede
+                </h3>
+              </div>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                Links diretos para as rádios exclusivas de cada uma de nossas
+                lojas. Crie o ambiente perfeito para os clientes.
+              </p>
+              <a href="radios/" class="btn-primary">Ouvir Rádios</a>
+            </div>
+
+            <!-- Card Mapa -->
+            <div
+              class="content-card animate-on-scroll"
+              style="transition-delay: 0.4s"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center mr-4"
+                >
+                  <span class="text-2xl">🗺️</span>
+                </div>
+                <h3
+                  class="text-2xl font-bold title-font"
+                  style="color: #10b981"
+                >
+                  Localização das Lojas
+                </h3>
+              </div>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                Encontre todas as nossas unidades com endereços completos,
+                horários de funcionamento e informações de contato.
+              </p>
+              <a href="map/" class="btn-primary">Ver Mapa</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PÁGINA 4: CONTATO -->
+      <section class="section" id="contato">
+        <div class="main-container text-center animate-on-scroll">
+          <h2 class="text-4xl font-bold section-title title-font mb-8">
+            Precisa de Ajuda?
+          </h2>
+          <p class="text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
+            Nossa equipe está sempre pronta para ajudar. Entre em contato com
+            nossos responsáveis para esclarecimentos, suporte técnico ou
+            qualquer dúvida.
+          </p>
+
+          <a
+              href="https://wa.me/5515997245620"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+          <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="content-card text-left">
+              <h3
+                class="text-xl font-bold mb-4 title-font"
+                style="color: #fbbf24"
+              >
+                Administração
+              </h3>
+              <p class="text-gray-700 mb-2"><strong>Daniele Corrêa</strong></p>
+              <p class="text-gray-600">
+                Administradora responsável por questões gerais, senhas e
+                procedimentos administrativos.
+              </p>
+            </div>
+        </a>
+
+            <a
+              href="https://wa.me/5511933854995"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+            <div class="content-card text-left">
+              <h3
+                class="text-xl font-bold mb-4 title-font"
+                style="color: #ef4444"
+              >
+                Supervisão
+              </h3>
+              <p class="text-gray-700 mb-2">
+                <strong>Leonardo Gabriel</strong>
+              </p>
+              <p class="text-gray-600">
+                Supervisor responsável por cronogramas, tarefas diárias e
+                orientações operacionais.
+              </p>
+            </div>
+        </a>
+
+            <a
+              href="https://wa.me/5511911964201"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="content-card text-left">
+                <h3
+                  class="text-xl font-bold mb-4 title-font"
+                  style="color: #00f72d"
+                >
+                  Suporte e TI
+                </h3>
+                <p class="text-gray-700 mb-2">
+                  <strong>Luiz Guilherme</strong>
+                </p>
+                <p class="text-gray-600">
+                  Responsável por gerenciamento de computadores e Sistemas das
+                  Lojas.
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="https://wa.me/5511945230488"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="content-card text-left">
+                <h3
+                  class="text-xl font-bold mb-4 title-font"
+                  style="color: #ff01c4"
+                >
+                  Marketing
+                </h3>
+                <p class="text-gray-700 mb-2"><strong>Maria Vitória</strong></p>
+                <p class="text-gray-600">
+                  Responsável por promoções, divulgação e anúncios de Marketing
+                  da Rede.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="text-center p-6 text-gray-500 bg-white/50 backdrop-blur-sm">
-        <p>&copy; 2024 Rede Cesária. Todos os direitos reservados.</p>
+      <p>&copy; 2024 Rede Cesária. Todos os direitos reservados.</p>
     </footer>
 
     <script src="shared-scripts.js"></script>
-</body>
+  </body>
 </html>
-
