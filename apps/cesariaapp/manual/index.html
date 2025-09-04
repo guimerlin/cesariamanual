@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual do Usuário - Cesária App</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            cursor: none;
+        }
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #EF4444;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        .cursor-follower {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(239, 68, 68, 0.2);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease-out;
+        }
+        .cursor.hovering {
+             background-color: rgba(239, 68, 68, 0.5);
+             width: 30px;
+             height: 30px;
+        }
+        .grainy-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><filter id="f"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23f)"/></svg>');
+            opacity: 0.04; z-index: 999;
+        }
+        .floating-elements {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            overflow: hidden; z-index: -1;
+        }
+        .floating-elements div { position: absolute; border-radius: 50%; animation: float 25s infinite linear; }
+        .floating-elements .circle1 { width: 80px; height: 80px; background: rgba(255, 243, 176, 0.5); bottom: -150px; left: 15%; animation-duration: 35s; }
+        .floating-elements .circle2 { width: 120px; height: 120px; background: rgba(239, 68, 68, 0.3); bottom: -150px; left: 70%; animation-duration: 29s; }
+        .floating-elements .circle3 { width: 50px; height: 50px; background: rgba(255, 243, 176, 0.7); bottom: -150px; left: 40%; animation-duration: 45s; animation-delay: -15s;}
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-120vh) rotate(720deg); opacity: 0; }
+        }
+        .glitch-title {
+            position: relative;
+            text-shadow: 0.05em 0.05em #FFF3B0;
+        }
+        .animate-on-scroll {
+            opacity: 0; transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+        .nav-link { position: relative; transition: color 0.3s ease; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 50%; background-color: #EF4444; transition: all 0.3s ease-in-out; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; left: 0; }
+        .nav-link.active { color: #EF4444; }
+        .collage-img {
+            border: 3px solid #1a1a1a; padding: 8px; background-color: white;
+            box-shadow: 6px 6px 0 #FFF3B0; cursor: zoom-in;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .collage-img:hover { transform: rotate(-2deg) scale(1.03); box-shadow: 10px 10px 0 #EF4444; }
+        #image-modal { transition: opacity 0.3s ease; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <div class="grainy-overlay"></div>
+    <div class="floating-elements">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b-2 border-gray-900">
+        <nav class="container mx-auto px-6 py-4 flex justify-center items-center">
+            <div class="flex space-x-4 md:space-x-8">
+                <a href="#introducao" class="nav-link active" data-section="introducao">Introdução</a>
+                <a href="#conversas" class="nav-link" data-section="conversas">Conversas</a>
+                <a href="#navegacao" class="nav-link" data-section="navegacao">Navegação</a>
+                <a href="#transferencia" class="nav-link" data-section="transferencia">Transferência</a>
+                <a href="#convenios" class="nav-link" data-section="convenios">Convênios</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mx-auto p-6 md:p-12">
+
+        <!-- Seção Introdução -->
+        <section id="introducao" class="content-section text-center min-h-[70vh] flex flex-col justify-center items-center">
+            <h1 class="glitch-title text-5xl md:text-7xl font-bold uppercase tracking-widest mb-4">
+                Manual Cesária<span class="text-red-500">.</span>App
+            </h1>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-700 mb-8 animate-on-scroll">
+                Este guia foi desenvolvido para ajudá-lo a navegar e utilizar todas as funcionalidades do aplicativo de forma eficiente.
+            </p>
+        </section>
+
+        <!-- Seção Conversas -->
+        <section id="conversas" class="content-section py-16">
+            <div class="grid md:grid-cols-5 gap-12 items-center bg-white border-2 border-gray-900 rounded-lg p-8 md:p-12 animate-on-scroll">
+                <div class="md:col-span-3">
+                    <h2 class="text-4xl font-bold mb-4">Seção de Conversas</h2>
+                    <p class="text-lg text-gray-700 mb-4">Esta é a pagina inicial do App, aqui você poderá interagir com as demais lojas da Rede através dos Chats, cada Usuário do App é listado no painel esquerdo do Aplicativo, e a conversa selecionada fica disponível logo ao lado.</p>
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+                        <li><strong class="font-semibold text-gray-900">Lista de Chats:</strong> A lista de Chats, como dito antes, mostra todos os usuários do App, basta clicar em qualquer um deles para iniciar uma conversa. O Status online é indicado por um <strong class="text-green-600 font-semibold">ponto verde</strong>. logo ao lado do nome de usuário, com isso, sabemos qual loja está online e disponível para te responder.</li>
+                        <li><strong class="font-semibold text-gray-900">Envio de Mensagens:</strong> Envie mensagens <strong class="font-semibold text-gray-800">normais</strong> para responder por perguntas sem urgência, as mensagens normais <strong class="font-semibold text-red-500">não são notificadas de forma nenhuma</strong>, apenas ficam visíveis para os usuários que estão vendo a conversa. Você também pode e deve usar <strong class="font-semibold text-red-500">Mensagens Urgentes</strong> para notificações sonoras e visuais. Essas mensagens são notificadas para todos que a receberem, ativando um alerta sonoro e visual, para que a mensagem não passe despercebida.</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                     <img src="secao-conversas.png" alt="Tela de conversas do Cesária App" class="collage-img w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Navegação -->
+        <section id="navegacao" class="content-section py-16">
+            <div class="grid md:grid-cols-5 gap-12 items-center bg-white border-2 border-gray-900 rounded-lg p-8 md:p-12 animate-on-scroll">
+                 <div class="md:col-span-2 md:order-last">
+                     <img src="navegacao-menu.png" alt="Menu de navegação do Cesária App" class="collage-img w-full h-auto object-cover mb-6">
+                     <img src="navegacao-icones.png" alt="Ícones da barra de navegação" class="collage-img w-full h-auto object-cover">
+                </div>
+                <div class="md:col-span-3">
+                    <h2 class="text-4xl font-bold mb-4">Navegação do Sistema</h2>
+                    <p class="text-lg text-gray-700">A barra de tarefas é acessada pelo <strong class="font-semibold text-red-500">botão de três barras (menu hambúrguer)</strong> ou pela tecla <strong class="font-semibold text-gray-900">F1</strong>, revelando opções para outras páginas do sistema.
+                    Após pressionar qualquer um dos botões, a barra surgirá na parte inferior do App, trazendo a possibilidade de navegar para outras páginas, como <strong class="font-semibold text-red-500">Solicitação de transferências</strong> e <strong class="font-semibold text-red-500">Consulta de convênios</strong>. Clicando nos botões da barra, você será imediatamente levado para a página a qual cada um representa. Para <strong class="font-semibold text-red-500">remover a barra de navegação</strong>, basta pressionar qualquer um dos botões citados novamente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Transferência de Produtos -->
+        <section id="transferencia" class="content-section py-16">
+            <div class="bg-white border-2 border-gray-900 rounded-lg p-8 md:p-12 animate-on-scroll">
+                <h2 class="text-4xl font-bold text-center mb-12">Transferência de Produtos</h2>
+                <!-- Subseção: Solicitar -->
+                <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+                    <div class="text-left">
+                        <h3 class="text-3xl font-bold mb-3">Como Solicitar Produtos</h3>
+                        <p class="text-gray-700 leading-relaxed">Para solicitar um produto de uma outra loja, basta clicar no campo nome do Produto e inserir o <strong class="font-semibold text-red-500">nome ou código de barras</strong> do produto desejado. Você também pode usar o <strong class="font-semibold text-red-500">Scanner de Código de barras</strong> se disponível, após digitar ou escanear, pressione <strong class="font-semibold">'Buscar'</strong> ou pressione a tecla <strong class="font-semibold text-red-500">Enter</strong> em seu teclado físico. A lista de produtos disponíveis separados por Loja irá aparecer logo abaixo. Para pedir, clique em <strong class="font-semibold text-green-600">'Solicitar'</strong> no item desejado, e escolha a quantidade a ser solicitada. Após a solicitação, a loja para a qual a solicitação foi enviada enviará uma resposta. Caso seja aceita, o produto já terá sido transferido para o estoque da loja, e caso ocorra um erro, ou seja rejeitado, uma mensagem aparecerá na tela.</p>
+                    </div>
+                    <img src="transferencia-busca.png" alt="Busca de produtos para transferência" class="collage-img w-full h-auto object-cover">
+                </div>
+                <!-- Subseção: Receber -->
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <img src="transferencia-solicitacao.png" alt="Caixa de diálogo de solicitação" class="collage-img w-full h-auto object-cover md:order-last">
+                    <div class="text-left">
+                        <h3 class="text-3xl font-bold mb-3">Recebendo uma Solicitação</h3>
+                        <div class="border-l-4 border-yellow-400 pl-4 py-2 bg-yellow-50 my-4">
+                            <p class="font-bold text-gray-800">Atenção!</p>
+                            <p class="text-gray-700">Confirme todos os detalhes (Loja, Produto, Quantidade) antes de enviar. A notificação aparece apenas uma vez.</p>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">Quando uma loja realizar uma solicitação de produto para a sua loja, uma caixa de notificação aparecerá na tela com as infrmações do pedido. Na caixa de diálogo, confirme os detalhes e clique em <strong class="font-semibold text-green-600">'Enviar'</strong> ou <strong class="font-semibold text-red-500">'Rejeitar'</strong>. O estoque é <strong class="font-semibold text-red-500">atualizado automaticamente</strong>, subtraindo o item do estoque local e adicionando no estoque da loja de destino. Em caso de <strong class="font-semibold text-red-500">erro</strong>, siga as instruções da caixa de diálogo que aparecerá na tela.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Consulta de Convênios -->
+        <section id="convenios" class="content-section py-16">
+             <div class="grid md:grid-cols-5 gap-12 items-center bg-white border-2 border-gray-900 rounded-lg p-8 md:p-12 animate-on-scroll">
+                <div class="md:col-span-3">
+                    <h2 class="text-4xl font-bold mb-4">Pesquisando Convênios</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">A pesquisa por convênios permite que você realize buscas de débitos pendentes de clientes em outras lojas da rede, tornando a organização muito mais fácil e rápida.</p>
+                    <ol class="list-decimal list-inside text-lg text-gray-700 space-y-2 mt-4">
+                        <li>Digite o Nome do Cliente.</li>
+                        <li>Pesquise ou pressione Enter.</li>
+                        <li>Visualize os Resultados para ver os débitos.</li>
+                        <li>Você pode clicar na linha de um cliente específico  para visualizar infrmações detalhadas sobre ele, como nome do Convênio, limite disponível em cada loja, total gasto em cada loja, e até mesmo os dados do que foi comprado.</li>
+                    </ol>
+                </div>
+                 <div class="md:col-span-2">
+                    <img src="consulta-convenios.png" alt="Tela de consulta de convênios" class="collage-img w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+             <p>&copy; 2024 Cesária App. Todos os direitos reservados.</p>
+             <p class="text-sm text-gray-400 mt-2">Cuidar é o nosso remédio.</p>
+        </div>
+    </footer>
+    
+    <!-- Modal para Zoom de Imagem -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm hidden items-center justify-center p-4 z-[100] cursor-zoom-out">
+        <img id="modal-img" src="" alt="Imagem ampliada" class="max-w-[95vw] max-h-[95vh] object-contain rounded-lg border-2 border-white">
+        <span id="close-modal" class="absolute top-4 right-6 text-white text-5xl font-bold cursor-pointer select-none hover:text-red-500 transition-colors">&times;</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cursor Personalizado
+            const cursor = document.querySelector('.cursor');
+            const cursorFollower = document.querySelector('.cursor-follower');
+            document.addEventListener('mousemove', e => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, button, input, textarea, .collage-img').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+            });
+
+            // Animação de Scroll
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
+
+            // Navegação por Scroll
+            const sections = document.querySelectorAll('.content-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('data-section') === id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { root: null, rootMargin: '-40% 0px -60% 0px', threshold: 0 });
+            sections.forEach(section => navObserver.observe(section));
+            
+            // Modal de Imagem
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            const closeModalBtn = document.getElementById('close-modal');
+            const zoomableImages = document.querySelectorAll('.collage-img');
+
+            const openModal = (src) => {
+                modalImg.src = src;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            };
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                modalImg.src = "";
+            };
+
+            zoomableImages.forEach(img => img.addEventListener('click', () => openModal(img.src)));
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+        });
+    </script>
+
+</body>
+</html>
+
