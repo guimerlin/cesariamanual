@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesária App - Rede Cesária</title>
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; color: #212529; }
+        .header-bg { background-color: #ffffff; }
+        .card { background-color: #ffffff; border: 1px solid #dee2e6; transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+        .neo-button { transition: all 0.2s ease-in-out; }
+        .neo-button:hover { transform: scale(1.05); }
+        .back-link { transition: color 0.3s ease; }
+        .back-link:hover { color: #0d6efd; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="header-bg shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gray-800">Rede Cesária</h1>
+            <a href="../" class="back-link text-blue-600 font-semibold">&larr; Voltar para Aplicações</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <section class="text-center py-16">
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-800">Cesária App</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                Comunicação instantânea e gestão de produtos entre lojas. O Cesária App foi feito sob medida para conectar nossa rede.
+            </p>
+        </section>
+
+        <section class="card rounded-xl p-8 md:p-12">
+            <h3 class="text-2xl font-bold text-center mb-10">Principais Funcionalidades</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-100 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0d6efd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <h4 class="font-bold mt-4 text-lg">Chat Integrado</h4>
+                    <p class="text-gray-600 mt-1">Converse com outras lojas, envie avisos normais ou urgentes.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-100 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0d6efd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"></path><path d="M4 20L20 4"></path><path d="M21 16v5h-5"></path><path d="M15 15l5.3 5.3"></path><path d="M4 4l5.3 5.3"></path></svg>
+                    </div>
+                    <h4 class="font-bold mt-4 text-lg">Transferências</h4>
+                    <p class="text-gray-600 mt-1">Solicite e aprove transferências de produtos com baixa automática no estoque.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-100 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0d6efd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 2.83a1 1 0 0 1 .83 1.54l-2.07 4.14a2 2 0 0 0 .13 2.2l4.14 4.14a2 2 0 0 0 2.2.13l4.14-2.07a1 1 0 0 1 1.54.83v2.26a1 1 0 0 1-1.6 1.83l-4.14-2.07a2 2 0 0 0-2.2-.13l-4.14 4.14a2 2 0 0 0-.13 2.2l2.07 4.14a1 1 0 0 1-1.83 1.6l-2.26-1.13a1 1 0 0 1-.83-1.54l2.07-4.14a2 2 0 0 0-.13-2.2L2.83 8.5a1 1 0 0 1-1.83-1.6l2.26-1.13a1 1 0 0 1 1.54.83l-2.07 4.14a2 2 0 0 0 .13 2.2l4.14 4.14a2 2 0 0 0 2.2.13l4.14-4.14a2 2 0 0 0 .13-2.2l-2.07-4.14a1 1 0 0 1 .83-1.54h2.26z"></path></svg>
+                    </div>
+                    <h4 class="font-bold mt-4 text-lg">Consulta de Convênios</h4>
+                    <p class="text-gray-600 mt-1">Verifique débitos de clientes em qualquer loja da rede.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-100 p-4 rounded-full">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0d6efd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"></path><path d="M12 16.5A4.5 4.5 0 1 0 7.5 12 4.5 4.5 0 0 0 12 16.5z"></path><path d="M12 2v2.5"></path><path d="M12 22v-2.5"></path><path d="M22 12h-2.5"></path><path d="M2 12h2.5"></path></svg>
+                    </div>
+                    <h4 class="font-bold mt-4 text-lg">Status Online</h4>
+                    <p class="text-gray-600 mt-1">Veja quais lojas estão online e disponíveis para comunicação.</p>
+                </div>
+            </div>
+             <div class="text-center mt-12">
+                <a href="manual/" class="neo-button inline-block py-3 px-8 bg-blue-600 text-white font-bold text-lg rounded-lg shadow-md hover:bg-blue-700">
+                    Acessar o Manual Detalhado &rarr;
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="text-center p-6 mt-12 text-gray-500">
+        <p>&copy; 2024 Rede Cesária. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+

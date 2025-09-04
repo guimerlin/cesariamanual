@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia do Colaborador - Rede Cesária</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #1a1a1a; color: #f8f8f8; }
+        .font-mono { font-family: 'Space Mono', monospace; }
+        .grainy-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><filter id="f"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23f)"/></svg>'); opacity: 0.08; z-index: 999; }
+        .content-card { background-color: rgba(35, 35, 35, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); }
+        .neo-button { transition: all 0.2s ease-in-out; border: 2px solid transparent;}
+        .neo-button:hover { transform: scale(1.05); border-color: #FFF3B0; }
+        .back-link { transition: color 0.3s ease; }
+        .back-link:hover { color: #EF4444; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="grainy-overlay"></div>
+    
+    <header class="p-6">
+        <a href="../" class="back-link text-yellow-300 font-mono">&larr; Voltar para a Página Inicial</a>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl md:text-7xl font-bold font-mono uppercase">Guia do Colaborador</h1>
+            <p class="mt-4 text-xl text-gray-400 max-w-3xl mx-auto">Informações essenciais para o seu dia a dia na Rede Cesária.</p>
+        </div>
+
+        <div class="space-y-12">
+            <!-- Seção 1 -->
+            <div class="content-card rounded-lg p-8">
+                <h2 class="text-3xl font-bold font-mono mb-4 text-yellow-300">1. Organização e seu papel</h2>
+                <div class="space-y-3 text-gray-300 text-lg">
+                    <p><strong class="text-white">Organização de produtos:</strong> Mantenha sempre a sua seção organizada e limpa.</p>
+                    <p><strong class="text-white">Controle de validade:</strong> Verifique a validade dos produtos regularmente e sinalize os que estão próximos do vencimento.</p>
+                    <p><strong class="text-white">Sistema de premiação:</strong> Mantenha os cadastros dos produtos sempre atualizados para que seu esforço seja reconhecido.</p>
+                </div>
+            </div>
+
+            <!-- Seção 2 -->
+            <div class="content-card rounded-lg p-8">
+                <h2 class="text-3xl font-bold font-mono mb-4 text-yellow-300">2. Nossos sistemas</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2">Pharmagno ERP</h3>
+                        <p class="text-gray-300 text-lg mb-4">Nosso sistema de gestão para controle de estoque, vendas e operações.</p>
+                        <a href="../apps/pharmagno/manual/" class="neo-button inline-block py-2 px-6 bg-gray-700 text-white font-semibold rounded-md">Ver Manual do Pharmagno</a>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2">Cesária App</h3>
+                        <p class="text-gray-300 text-lg mb-4">Nossa ferramenta de comunicação e transferência de produtos entre lojas.</p>
+                        <a href="../apps/cesariaapp/manual/" class="neo-button inline-block py-2 px-6 bg-red-600 text-white font-semibold rounded-md">Ver Manual do Cesária App</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção 3 e 4 -->
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="content-card rounded-lg p-8">
+                    <h2 class="text-3xl font-bold font-mono mb-4 text-yellow-300">3. Rádios das lojas</h2>
+                    <p class="text-gray-300 text-lg mb-4">Cada loja tem uma rádio exclusiva para criar um ambiente agradável.</p>
+                    <a href="../radios/" class="neo-button inline-block py-2 px-6 bg-gray-700 text-white font-semibold rounded-md">Acessar Rádios</a>
+                    <a href="#" class="neo-button inline-block py-2 px-6 bg-gray-700 text-white font-semibold rounded-md mt-2">Guia de Playlists</a>
+                </div>
+                <div class="content-card rounded-lg p-8">
+                    <h2 class="text-3xl font-bold font-mono mb-4 text-yellow-300">4. Procedimentos de vendas</h2>
+                    <p class="text-gray-300 text-lg mb-4">Usamos o MagnoPDV para registrar as vendas e controlar o caixa.</p>
+                    <a href="../apps/magnopdv/manual/" class="neo-button inline-block py-2 px-6 bg-gray-700 text-white font-semibold rounded-md">Manual do MagnoPDV</a>
+                     <a href="#" class="neo-button inline-block py-2 px-6 bg-gray-700 text-white font-semibold rounded-md mt-2">Ver Procedimentos</a>
+                </div>
+            </div>
+
+             <!-- Seção 5 -->
+            <div class="content-card rounded-lg p-8">
+                <h2 class="text-3xl font-bold font-mono mb-4 text-yellow-300">5. Regras e avisos importantes</h2>
+                 <div class="space-y-4 text-gray-300 text-lg">
+                    <p><strong class="text-white">Cronograma e tarefas:</strong> Utilize o cronograma diário do supervisor e inclua tarefas de reposição e limpeza.</p>
+                    <p><strong class="text-white">Transferências:</strong> Usuários treinados no chat não precisam mais emitir cupom. É obrigatório comunicar a transferência no grupo do motoboy.</p>
+                    <p><strong class="text-white">Caixa:</strong> Um novo login <span class="font-mono text-yellow-300">CAIXA</span>, sem senha, deve ser usado para abertura no PDV. Peça para a adm. Daniele alterar senhas compartilhadas.</p>
+                    <p><strong class="text-white">Máquina de cartão:</strong> O Bruno tem máquina própria, não é preciso ceder uma da loja.</p>
+                    <p><strong class="text-white">Suporte:</strong> Em caso de dúvidas, procure a adm. <span class="font-semibold text-white">Daniele Correa</span> ou o supervisor <span class="font-semibold text-white">Leonardo Gabriel</span>.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
